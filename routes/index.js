@@ -1,11 +1,8 @@
-// const heroRoutes = require('../controller/admin/hero')
+const heroRoutes = require('../controller/admin/hero')
 
 async function routes(fastify, options) {
 
-    fastify.get('/hero', function (req, reply) {
-        return reply
-            .send("ddd")
-    })
+    fastify.get('/hero', heroRoutes.get)
 }
 
 module.exports = routes
